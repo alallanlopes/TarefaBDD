@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>tarefa Rafael BDD</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>     
+    <style>
+        #form {
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h5>Cadastre seu email para receber promoções imperdíveis!!!</h5>
+        <label for="email">email: </label><input type="text" id="email"/> <br> <br>
+        <button id="cadastrar" onclick="cadastrar()">cadastrar</button> <br> <br>
+        <div id="mensagem"></div>
+    </div>
+    <script>
+        function cadastrar() {
+            const email = document.getElementById('email').value
+            const corpo = JSON.stringify({'email':email})
+
+            fetch('/api/emails', {method: 'POST', headers: {'Content-Type': 'application/json'}, body:corpo })
+            .then(r=>r.json())
+            .then(resposta => document.getElementById('mensagem').innerHTML=resposta.mensagem)
+        }
+    </script>
+
+</body>
+</html>
