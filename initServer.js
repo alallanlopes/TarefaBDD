@@ -1,0 +1,1 @@
+require('./server').startServer(3050)
