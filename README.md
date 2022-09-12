@@ -23,7 +23,10 @@ npm run open
 
 Descrição dos arquivos:
 server.js -> código backend;
+
 promocao.html -> código client (frontend);
+
 cadastrarEmail.feature -> a história em BDD;
+
 cadastrarEmail.js-> testes automatizados integrados com a história;
 
