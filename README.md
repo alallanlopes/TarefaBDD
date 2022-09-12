@@ -22,6 +22,7 @@ Para abrir a GUI do Cypress:
 npm run open
 
 Descrição dos arquivos:
+
 server.js -> código backend;
 
 promocao.html -> código client (frontend);
